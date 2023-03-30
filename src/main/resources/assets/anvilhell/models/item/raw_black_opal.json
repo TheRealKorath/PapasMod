@@ -1,4 +1,4 @@
-#{
+{
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "anvilhell:item/raw_black_opal"

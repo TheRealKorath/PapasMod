@@ -1,0 +1,7 @@
+{
+  "variants":
+  {
+    "enabled=true": { "model":  "anvilhell:block/black_opal_block"},
+    "enabled=false": { "model":  "anvilhell:block/black_opal_block_unlit"}
+  }
+}
