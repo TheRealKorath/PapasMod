@@ -1,5 +1,6 @@
 package com.korath.anvilhell;
 
+import com.korath.anvilhell.item.ModCreativeModeTabs;
 import com.korath.anvilhell.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -48,7 +49,8 @@ public class AnvilHell
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+
+        if(event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB) {
             event.accept(ModItems.BLACK_OPAL);
             event.accept(ModItems.RAW_BLACK_OPAL);
         }
