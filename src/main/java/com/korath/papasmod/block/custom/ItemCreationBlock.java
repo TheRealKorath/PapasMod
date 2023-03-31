@@ -44,8 +44,10 @@ public class ItemCreationBlock extends Block implements EntityBlock {
         if(!level.isClientSide() && state.getValue(ENABLED).booleanValue() && entity instanceof Player player)
         {
             level.setBlock(pos, state.cycle(ENABLED), 3);
-            player.addItem(new ItemStack(getRandomItem(), 1));
-            player.sendSystemMessage(Component.literal("create something"));
+            ItemStack stack = new ItemStack(getRandomItem(), 1);
+            player.sendSystemMessage(Component.literal("You got " + stack.getHoverName().getString()));
+            player.addItem(stack);
+
 
 
         }

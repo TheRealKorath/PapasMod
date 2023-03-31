@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "anvilhell:black_opal_placed",
+  "features": "papasmod:black_opal_placed",
   "step": "underground_ores"
 }
