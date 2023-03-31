@@ -1,10 +1,14 @@
 package com.korath.papasmod;
 
 import com.korath.papasmod.block.ModBlocks;
+import com.korath.papasmod.blockentities.ModBlockEntities;
+import com.korath.papasmod.client.renderer.HealOrbRenderer;
 import com.korath.papasmod.item.ModCreativeModeTabs;
 import com.korath.papasmod.item.ModItems;
+import com.korath.papasmod.itementities.ModItemEntities;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -34,6 +38,8 @@ public class PapasMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModItemEntities.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -81,7 +87,7 @@ public class PapasMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModItemEntities.HEAL_ORB.get(), HealOrbRenderer::new);
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }

@@ -1,6 +1,5 @@
 package com.korath.papasmod.blockentities;
 
-import com.korath.papasmod.block.ModBlocks;
 import com.korath.papasmod.block.custom.ItemCreationBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -12,7 +11,7 @@ public class ItemCreationBlockEntity extends BlockEntity {
    private int ticksToWait = 600;
 
     public ItemCreationBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlocks.ITEM_CREATOR.get(), pos, state);
+        super(ModBlockEntities.ITEM_CREATOR.get(), pos, state);
 
     }
 

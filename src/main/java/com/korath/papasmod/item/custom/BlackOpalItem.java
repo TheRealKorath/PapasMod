@@ -1,5 +1,7 @@
 package com.korath.papasmod.item.custom;
 
+import com.korath.papasmod.itementities.ModItemEntities;
+import com.korath.papasmod.itementities.custom.HealOrbEntity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
@@ -21,12 +23,19 @@ public class BlackOpalItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand)
     {
+        ItemStack itemstack = player.getItemInHand(hand);
         if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND)
         {
-            player.sendSystemMessage(Component.literal("A voice in your head says: Your lucky number is: " + getRandonNumber()));
-            player.getCooldowns().addCooldown(this, 120);
+            HealOrbEntity healOrb = new HealOrbEntity(ModItemEntities.HEAL_ORB.get(), player, level);
+            healOrb.setDeltaMovement(player.getForward());
+            level.addFreshEntity(healOrb);
+
+            //player.sendSystemMessage(Component.literal("A voice in your head says: Your lucky number is: " + getRandonNumber()));
+            player.getCooldowns().addCooldown(this, 20);
+            return InteractionResultHolder.consume(itemstack);
         }
-        return super.use(level, player, hand);
+        return InteractionResultHolder.pass(player.getItemInHand(hand));
+
     }
 
     private int getRandonNumber()

@@ -58,6 +58,8 @@ minecraft {
             }
         }
 
+
+
         server {
             workingDirectory project.file('run')
 
@@ -85,6 +87,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             property 'forge.enabledGameTestNamespaces', 'papasmod'
+
 
             mods {
                 papasmod {

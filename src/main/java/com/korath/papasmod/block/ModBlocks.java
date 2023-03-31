@@ -2,14 +2,12 @@ package com.korath.papasmod.block;
 
 import com.korath.papasmod.PapasMod;
 import com.korath.papasmod.block.custom.ItemCreationBlock;
-import com.korath.papasmod.blockentities.ItemCreationBlockEntity;
 import com.korath.papasmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,16 +22,13 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PapasMod.MOD_ID);
 
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, PapasMod.MOD_ID);
+
 
     public static final RegistryObject<Block> BLACK_OPAL_BLOCK = registerBlock("black_opal_block",
             () -> new ItemCreationBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(ItemCreationBlock.ENABLED) ? 15: 0)));
 
-    public static final RegistryObject<BlockEntityType<ItemCreationBlockEntity>> ITEM_CREATOR = BLOCK_ENTITIES.register("item_creator",
-            () -> BlockEntityType.Builder.of(ItemCreationBlockEntity::new, ModBlocks.BLACK_OPAL_BLOCK.get()).build(null));
 
     public static final RegistryObject<Block> BLACK_OPAL_ORE = registerBlock("black_opal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
@@ -51,6 +46,6 @@ public class ModBlocks {
     public static void register(IEventBus bus)
     {
         BLOCKS.register(bus);
-        BLOCK_ENTITIES.register(bus);
+
     }
 }

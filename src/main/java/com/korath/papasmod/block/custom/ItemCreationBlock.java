@@ -1,8 +1,8 @@
 package com.korath.papasmod.block.custom;
 
 import com.google.common.collect.Lists;
-import com.korath.papasmod.block.ModBlocks;
 import com.korath.papasmod.blockentities.ItemCreationBlockEntity;
+import com.korath.papasmod.blockentities.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;
@@ -74,7 +74,7 @@ public class ItemCreationBlock extends Block implements EntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return ModBlocks.ITEM_CREATOR.get().create(pos, state);
+        return ModBlockEntities.ITEM_CREATOR.get().create(pos, state);
     }
 
     @Nullable
