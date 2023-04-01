@@ -30,6 +30,7 @@ public class ModBlocks {
                     .lightLevel(state -> state.getValue(ItemCreationBlock.ENABLED) ? 15: 0)));
 
 
+
     public static final RegistryObject<Block> BLACK_OPAL_ORE = registerBlock("black_opal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));

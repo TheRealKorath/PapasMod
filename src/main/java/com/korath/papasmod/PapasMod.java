@@ -6,6 +6,7 @@ import com.korath.papasmod.client.renderer.HealOrbRenderer;
 import com.korath.papasmod.item.ModCreativeModeTabs;
 import com.korath.papasmod.item.ModItems;
 import com.korath.papasmod.itementities.ModItemEntities;
+import com.korath.papasmod.particle.ModParticles;
 import com.korath.papasmod.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -42,6 +43,9 @@ public class PapasMod
         ModBlockEntities.register(modEventBus);
         ModItemEntities.register(modEventBus);
         ModSounds.register(modEventBus);
+        //ModParticles.register(modEventBus);
+
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);

@@ -1,7 +1,7 @@
 package com.korath.papasmod.item;
 
 import com.korath.papasmod.PapasMod;
-import com.korath.papasmod.item.custom.BlackOpalItem;
+import com.korath.papasmod.item.custom.HealingGemItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,7 +12,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PapasMod.MOD_ID);
 
     public static final RegistryObject<Item> BLACK_OPAL = ITEMS.register("black_opal",
-            () -> new BlackOpalItem(new Item.Properties()));
+            () -> new HealingGemItem(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_BLACK_OPAL = ITEMS.register("raw_black_opal",
             () -> new Item(new Item.Properties()));
