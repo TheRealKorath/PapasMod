@@ -3,5 +3,6 @@
   "item.papasmod.raw_black_opal": "Raw Black Opal",
   "block.papasmod.black_opal_block": "Black Opal Block",
   "block.papasmod.black_opal_ore": "Black Opal Ore",
-  "creativemodetab.tutorial_tab": "Papas Stuff"
+  "creativemodetab.tutorial_tab": "Papas Stuff",
+  "sounds.papasmod.heal_orb_fired": "Test"
 }

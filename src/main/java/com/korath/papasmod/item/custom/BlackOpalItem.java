@@ -2,7 +2,9 @@ package com.korath.papasmod.item.custom;
 
 import com.korath.papasmod.itementities.ModItemEntities;
 import com.korath.papasmod.itementities.custom.HealOrbEntity;
+import com.korath.papasmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -29,9 +31,11 @@ public class BlackOpalItem extends Item {
             HealOrbEntity healOrb = new HealOrbEntity(ModItemEntities.HEAL_ORB.get(), player, level);
             healOrb.setDeltaMovement(player.getForward());
             level.addFreshEntity(healOrb);
-
-            //player.sendSystemMessage(Component.literal("A voice in your head says: Your lucky number is: " + getRandonNumber()));
+            itemstack.shrink(1);
+            healOrb.playSound(ModSounds.HEAL_ORB_FIRED.get());
+            //level.playSound(null, healOrb.getX(), healOrb.getY(), healOrb.getZ(),ModSounds.HEAL_ORB_FIRED.get(), SoundSource.PLAYERS,1f,1f );
             player.getCooldowns().addCooldown(this, 20);
+
             return InteractionResultHolder.consume(itemstack);
         }
         return InteractionResultHolder.pass(player.getItemInHand(hand));

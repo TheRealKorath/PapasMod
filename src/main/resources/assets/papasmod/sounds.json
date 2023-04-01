@@ -1,0 +1,20 @@
+{
+  "heal_orb_fired":
+  {
+    "subtitle": "sounds.papasmod.heal_orb_fired",
+    "sounds":
+    [
+      "papasmod:heal_orb_fired"
+    ]
+
+  },
+  "heal_orb_hit":
+  {
+    "subtitle": "sounds.papasmod.heal_orb_hit",
+    "sounds":
+    [
+      "papasmod:heal_orb_hit"
+    ]
+
+  }
+}

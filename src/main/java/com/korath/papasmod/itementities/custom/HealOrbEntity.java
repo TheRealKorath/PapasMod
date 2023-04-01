@@ -1,5 +1,6 @@
 package com.korath.papasmod.itementities.custom;
 
+import com.korath.papasmod.sound.ModSounds;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.sounds.SoundEvents;
@@ -15,7 +16,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.NetworkHooks;
 
-public class HealOrbEntity extends AbstractArrow {
+public class HealOrbEntity extends AbstractOrb {
     public HealOrbEntity(EntityType<HealOrbEntity> entityType, Level world) {
         super(entityType, world);
         this.setNoGravity(true);
@@ -44,6 +45,7 @@ public class HealOrbEntity extends AbstractArrow {
         if(result.getEntity() instanceof Player player)
         {
             player.heal(4f);
+            this.playSound(ModSounds.HEAL_ORB_HIT.get());
 
         }
         discard();
