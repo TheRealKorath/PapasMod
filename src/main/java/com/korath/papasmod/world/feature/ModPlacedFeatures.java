@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> BLACK_OPAL_PLACED_KEY = createKey("black_opal_placed");
+    public static final ResourceKey<PlacedFeature> JADE_PLACED_KEY = createKey("jade_placed");
 
 
 
@@ -24,8 +24,8 @@ public class ModPlacedFeatures {
 
 
 
-        register(context, BLACK_OPAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLACK_OPAL_ORE_KEY),
-                commonOrePlacement(30, // VeinsPerChunk
+        register(context, JADE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.JADE_ORE_KEY),
+                commonOrePlacement(8, // VeinsPerChunk
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80))));
 
     }

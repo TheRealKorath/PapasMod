@@ -11,10 +11,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PapasMod.MOD_ID);
 
-    public static final RegistryObject<Item> BLACK_OPAL = ITEMS.register("black_opal",
+    public static final RegistryObject<Item> JADE = ITEMS.register("jade",
             () -> new HealingGemItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> RAW_BLACK_OPAL = ITEMS.register("raw_black_opal",
+    public static final RegistryObject<Item> RAW_JADE = ITEMS.register("raw_jade",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus bus)

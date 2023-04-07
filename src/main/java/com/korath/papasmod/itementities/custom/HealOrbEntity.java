@@ -62,7 +62,7 @@ public class HealOrbEntity extends AbstractOrb {
 
     }
 
-    private void spawnHealingParticles(BlockPos pos, ServerLevel level )
+    public static  void spawnHealingParticles(BlockPos pos, ServerLevel level )
     {
         for(int i=0; i < 360; i++)
         {

@@ -6,6 +6,7 @@ import com.korath.papasmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -23,11 +24,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        oreSmelting(consumer, List.of(ModItems.RAW_BLACK_OPAL.get()), RecipeCategory.MISC,
-                ModItems.BLACK_OPAL.get(), 0.7f, 200, "black_opal");
+        oreSmelting(consumer, List.of(ModItems.RAW_JADE.get()), RecipeCategory.MISC,
+                ModItems.JADE.get(), 0.7f, 200, "jade");
 
-        nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.BLACK_OPAL.get(), RecipeCategory.MISC,
-                ModBlocks.BLACK_OPAL_BLOCK.get());
+        nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.JADE.get(), RecipeCategory.MISC,
+                ModBlocks.JADE_BLOCK.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_OPAL_BLOCK.get()).define('J', ModItems.JADE.get()).define('D', Items.DIAMOND).define('E', Items.EMERALD).pattern("JDE").pattern("JDE").pattern("JDE").group((String)null)
+                .unlockedBy(getHasName(ModItems.JADE.get()), has(ModItems.JADE.get())).save(consumer, new ResourceLocation(PapasMod.MOD_ID, getSimpleRecipeName(ModBlocks.BLACK_OPAL_BLOCK.get())));
 
 
     }

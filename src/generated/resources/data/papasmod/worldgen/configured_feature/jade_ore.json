@@ -2,11 +2,11 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "size": 12,
+    "size": 9,
     "targets": [
       {
         "state": {
-          "Name": "papasmod:black_opal_ore"
+          "Name": "papasmod:jade_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

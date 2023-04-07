@@ -18,8 +18,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.BLACK_OPAL);
-        simpleItem(ModItems.RAW_BLACK_OPAL);
+        simpleItem(ModItems.JADE);
+        simpleItem(ModItems.RAW_JADE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

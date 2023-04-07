@@ -1,15 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "#": {
-      "item": "papasmod:black_opal"
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "J": {
+      "item": "papasmod:jade"
     }
   },
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "JDE",
+    "JDE",
+    "JDE"
   ],
   "result": {
     "item": "papasmod:black_opal_block"

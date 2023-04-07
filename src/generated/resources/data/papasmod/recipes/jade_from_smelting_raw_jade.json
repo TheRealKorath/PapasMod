@@ -3,9 +3,9 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.7,
-  "group": "black_opal",
+  "group": "jade",
   "ingredient": {
-    "item": "papasmod:raw_black_opal"
+    "item": "papasmod:raw_jade"
   },
-  "result": "papasmod:black_opal"
+  "result": "papasmod:jade"
 }

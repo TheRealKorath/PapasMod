@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "papasmod:black_opal_placed",
+  "features": "papasmod:jade_placed",
   "step": "underground_ores"
 }

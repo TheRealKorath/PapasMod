@@ -33,7 +33,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     .addModel();
         simpleBlockItem(ModBlocks.BLACK_OPAL_BLOCK.get(), blackOpalBlockLit);
 
-        blockWithItem(ModBlocks.BLACK_OPAL_ORE);
+        blockWithItem(ModBlocks.JADE_ORE);
+        blockWithItem(ModBlocks.JADE_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

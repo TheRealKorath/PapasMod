@@ -1,8 +1,9 @@
 {
-  "item.papasmod.black_opal": "Black Opal",
-  "item.papasmod.raw_black_opal": "Raw Black Opal",
-  "block.papasmod.black_opal_block": "Black Opal Block",
-  "block.papasmod.black_opal_ore": "Black Opal Ore",
+  "item.papasmod.jade": "Jade",
+  "item.papasmod.raw_jade": "Raw JAde",
+  "block.papasmod.jade_block": "Jade Block",
+  "block.papasmod.black_opal_block": "Surprise Block",
+  "block.papasmod.jade_ore": "JAde Ore",
   "creativemodetab.tutorial_tab": "Papas Stuff",
   "sounds.papasmod.heal_orb_fired": "Test"
 }

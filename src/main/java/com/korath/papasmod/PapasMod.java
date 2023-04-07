@@ -6,7 +6,6 @@ import com.korath.papasmod.client.renderer.HealOrbRenderer;
 import com.korath.papasmod.item.ModCreativeModeTabs;
 import com.korath.papasmod.item.ModItems;
 import com.korath.papasmod.itementities.ModItemEntities;
-import com.korath.papasmod.particle.ModParticles;
 import com.korath.papasmod.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -64,20 +63,22 @@ public class PapasMod
     {
 
         if(event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB) {
-            event.accept(ModItems.BLACK_OPAL);
-            event.accept(ModItems.RAW_BLACK_OPAL);
+            event.accept(ModItems.JADE);
+            event.accept(ModItems.RAW_JADE);
             event.accept(ModBlocks.BLACK_OPAL_BLOCK);
-            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.JADE_BLOCK);
+            event.accept(ModBlocks.JADE_ORE);
         }
 
         if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.BLACK_OPAL_BLOCK);
-            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.JADE_BLOCK);
+            event.accept(ModBlocks.JADE_ORE);
         }
 
         if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.BLACK_OPAL);
-            event.accept(ModItems.RAW_BLACK_OPAL);
+            event.accept(ModItems.JADE);
+            event.accept(ModItems.RAW_JADE);
         }
     }
 

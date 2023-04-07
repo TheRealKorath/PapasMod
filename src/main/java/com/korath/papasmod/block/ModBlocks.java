@@ -29,11 +29,16 @@ public class ModBlocks {
                     .strength(6f).requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(ItemCreationBlock.ENABLED) ? 15: 0)));
 
+    public static final RegistryObject<Block> JADE_BLOCK = registerBlock("jade_block",
+            () -> new ItemCreationBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops()));
 
 
-    public static final RegistryObject<Block> BLACK_OPAL_ORE = registerBlock("black_opal_ore",
+
+    public static final RegistryObject<Block> JADE_ORE = registerBlock("jade_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

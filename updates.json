@@ -1,0 +1,12 @@
+{
+  "homepage": "https://github.com/TheRealKorath/PapasMod",
+  "1.19.4": {
+    "1.1.0": "Jade has arrived",
+    "1.0.0": "First release"
+  },
+  "promos": {
+    "1.19.4-latest": "1.1.0",
+
+    "<1.19.4-recommended": "1.1.0"
+  }
+}

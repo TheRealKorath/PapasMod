@@ -152,10 +152,6 @@ public abstract class AbstractOrb extends Projectile {
             --this.shakeTime;
         }
 
-        if (this.isInWaterOrRain() || blockstate.is(Blocks.POWDER_SNOW) || this.isInFluidType((fluidType, height) -> this.canFluidExtinguish(fluidType))) {
-            this.clearFire();
-        }
-
         if (this.inGround && !flag) {
             if (this.lastState != blockstate && this.shouldFall()) {
                 this.startFalling();
@@ -222,14 +218,7 @@ public abstract class AbstractOrb extends Projectile {
             this.setYRot(lerpRotation(this.yRotO, this.getYRot()));
             float f = 0.99F;
             float f1 = 0.05F;
-            if (this.isInWater()) {
-                for(int j = 0; j < 4; ++j) {
-                    float f2 = 0.25F;
-                    this.level.addParticle(ParticleTypes.BUBBLE, d7 - d5 * 0.25D, d2 - d6 * 0.25D, d3 - d1 * 0.25D, d5, d6, d1);
-                }
 
-                f = this.getWaterInertia();
-            }
 
             this.setDeltaMovement(vec3.scale((double)f));
             if (!this.isNoGravity() && !flag) {
